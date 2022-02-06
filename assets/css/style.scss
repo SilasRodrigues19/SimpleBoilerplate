@@ -1,0 +1,171 @@
+@import './_reset';
+@import './_scrollbar';
+@import './_variables';
+@import './functions';
+html {
+    overflow: overlay;
+}
+
+body {
+    font-size: 16px;
+    /* 16px === 1rem */
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+h2 {
+    font-size: 1.375;
+}
+
+h3 {
+    font-size: 1.125rem;
+}
+
+h4 {
+    font-size: 1rem;
+}
+
+h5 {
+    font-size: .75rem;
+}
+
+h6 {
+    font-size: .625rem;
+}
+
+.dark-theme {
+    header {
+        .brand {
+            filter: invert(1)
+        }
+        .navbar a {
+            &:hover {
+                filter: brightness(.95);
+            }
+        }
+    }
+    section {
+        @include flexCenter;
+        min-height: 100vh;
+        margin: .625rem 0;
+    }
+     :is(header, section, footer) {
+        background: $exampleBackground;
+        color: $exampleColor;
+    }
+    footer {
+         :is(h1, p, .smoothScroll) {
+            color: $exampleColor;
+        }
+    }
+}
+
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    height: 5rem;
+    background: $dark-charcoal;
+    backdrop-filter: blur(25px);
+    border-bottom: 3px solid rgba($color: #111, $alpha: .1);
+    @include flexCenter2(space-between);
+    padding: 0 2.5rem;
+    .brand {
+        img {
+            cursor: pointer;
+            filter: invert(1);
+            transition: transform .3s ease-in-out;
+            &:hover {
+                transform: scale(1.1);
+                transition: transform .3s ease-in-out;
+            }
+        }
+    }
+    .menu {
+        font-size: 2.1rem;
+        cursor: pointer;
+        color: #fff;
+        display: none;
+    }
+}
+
+.navbar {
+    display: flex;
+    a {
+        color: $secondaryColor;
+        font-size: 1.1rem;
+        font-weight: bold;
+        padding: 0 1.25rem;
+        line-height: 5rem;
+        &:hover {
+            color: $primaryColor;
+        }
+    }
+}
+
+section {
+    @include flexCenter;
+    min-height: 100vh;
+    background: $dark-charcoal;
+    margin: .625rem 0;
+    color: $primaryColor;
+}
+
+footer {
+    @include flexCenter;
+    flex-direction: column;
+    width: 100%;
+    height: 3.125rem;
+    padding: 3.75rem 0;
+    background: $dark-charcoal;
+     :is(h1, p) {
+        color: #fff;
+    }
+    .smoothScroll {
+        position: fixed;
+        right: 3rem;
+        bottom: 3rem;
+        font-size: 3rem;
+        color: #fff;
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        .menu {
+            display: block;
+            .iconify:nth-of-type(2) {
+                display: none;
+            }
+        }
+        .navbar {
+            position: absolute;
+            left: -100%;
+            top: 5rem;
+            width: 100%;
+            height: calc(100vh - 5rem);
+            /* (altura total da tela - altura do header) */
+            background: rgba($color: $dark-charcoal, $alpha: .8);
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: all 700ms ease-in-out;
+            &.active {
+                left: 0;
+            }
+        }
+    }
+    footer {
+        .smoothScroll {
+            position: fixed;
+            right: 2rem;
+            bottom: 4rem;
+            font-size: 2rem;
+        }
+    }
+}
