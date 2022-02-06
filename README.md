@@ -9,7 +9,7 @@
 <samp>
 <p align="center">
   <a href="https://github.com/SilasRodrigues19/SimpleBoilerplate">
-    <img src="./public/favicon.ico" alt="Logo" width="80" height="80">
+    <img src="./favicon.ico" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Simple Boilerplate</h3>
