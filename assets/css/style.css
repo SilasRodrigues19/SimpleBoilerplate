@@ -81,6 +81,11 @@ h6 {
           filter: brightness(0.95);
 }
 
+.dark-theme header .menu {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
 .dark-theme section {
   display: -webkit-box;
   display: -ms-flexbox;

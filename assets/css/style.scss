@@ -45,6 +45,9 @@ h6 {
                 filter: brightness(.95);
             }
         }
+        .menu {
+            filter: invert(1);
+        }
     }
     section {
         @include flexCenter;
