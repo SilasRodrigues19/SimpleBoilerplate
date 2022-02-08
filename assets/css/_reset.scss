@@ -7,6 +7,11 @@
     font-family: 'Averia Sans Libre', cursive;
 }
 
+a[href]:not([class]) {
+    color: #5c94cd;
+    text-decoration: none;
+}
+
 a {
     text-decoration: none;
 }

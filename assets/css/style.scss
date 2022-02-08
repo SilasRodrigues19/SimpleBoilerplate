@@ -1,6 +1,6 @@
-@import './_reset';
-@import './_scrollbar';
-@import './_variables';
+@import './reset';
+@import './scrollbar';
+@import './variables';
 @import './functions';
 html {
     overflow: overlay;
@@ -37,16 +37,14 @@ h6 {
 
 .dark-theme {
     header {
-        .brand {
+        .brand,
+        .menu {
             filter: invert(1)
         }
         .navbar a {
             &:hover {
                 filter: brightness(.95);
             }
-        }
-        .menu {
-            filter: invert(1);
         }
     }
     section {

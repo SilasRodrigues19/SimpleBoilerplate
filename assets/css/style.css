@@ -8,6 +8,11 @@
   font-family: 'Averia Sans Libre', cursive;
 }
 
+a[href]:not([class]) {
+  color: #5c94cd;
+  text-decoration: none;
+}
+
 a {
   text-decoration: none;
 }
@@ -71,7 +76,8 @@ h6 {
   font-size: .625rem;
 }
 
-.dark-theme header .brand {
+.dark-theme header .brand,
+.dark-theme header .menu {
   -webkit-filter: invert(1);
           filter: invert(1);
 }
@@ -79,11 +85,6 @@ h6 {
 .dark-theme header .navbar a:hover {
   -webkit-filter: brightness(0.95);
           filter: brightness(0.95);
-}
-
-.dark-theme header .menu {
-  -webkit-filter: invert(1);
-          filter: invert(1);
 }
 
 .dark-theme section {
