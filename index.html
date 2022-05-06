@@ -30,7 +30,7 @@
     <link rel="preload" href="./assets/css/style.css" as="style">
     <link rel="stylesheet" href="./assets/css/style.css">
 
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2619096347004252" crossorigin="anonymous"></script>
+    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2619096347004252" crossorigin="anonymous"></script> -->
 
 </head>
 
@@ -54,6 +54,12 @@
         <div class="menu"></div>
     </header>
 
+    <!-- <div class="wrapper">
+        <img src="./assets/img/adblock.png" alt="Ad Block">
+        <p class="detect">Verificando bloqueador de anúncios...</p>
+        <p class="message"></p>
+    </div> -->
+
     <section id="home">
         <h1>Home</h1>
     </section>
@@ -69,7 +75,11 @@
 
     <footer>
         <h1>Seu nome</h1>
-        <p>&copy; 2022. Todos os direitos reservados.</p>
+        <p>
+            <script>
+                document.write('Copyright &copy ' + new Date().getFullYear() + '. Todos os direitos reservados.');
+            </script>
+        </p>
         <a class="smoothScroll" href="#home">
             <i class="uil uil-angle-up"></i>
         </a>
