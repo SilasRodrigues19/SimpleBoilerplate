@@ -159,6 +159,67 @@ header .menu {
   display: none;
 }
 
+.wrapper {
+  position: fixed;
+  left: 25%;
+  top: 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+  height: 35rem;
+  background: #fff;
+  border-radius: 1rem;
+  padding: 1.563rem;
+  -webkit-box-shadow: 0 0.625rem 0.1rem rgba(17, 17, 17, 0.1);
+          box-shadow: 0 0.625rem 0.1rem rgba(17, 17, 17, 0.1);
+  z-index: 3;
+}
+
+.wrapper img {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  width: 7.5rem;
+  margin: 1.125rem 1.875rem;
+}
+
+.wrapper .detect {
+  background: #adbce6;
+  color: #fff;
+  padding: 8px 15px;
+  font-weight: 600;
+  font-size: 22px;
+  text-align: center;
+}
+
+.wrapper .detect.ab {
+  background: red;
+}
+
+.wrapper .detect.no-ab {
+  background: #adbce6;
+}
+
+.wrapper .message {
+  color: #333;
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+}
+
 .navbar {
   display: -webkit-box;
   display: -ms-flexbox;

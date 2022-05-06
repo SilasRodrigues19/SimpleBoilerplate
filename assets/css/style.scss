@@ -94,6 +94,47 @@ header {
     }
 }
 
+.wrapper {
+    position: fixed;
+    left: 25%;
+    top: 15%;
+    @include flexCenter;
+    flex-direction: column;
+    width: 50%;
+    height: 35rem;
+    background: #fff;
+    border-radius: 1rem;
+    padding: 1.563rem;
+    box-shadow: 0 .625rem .1rem rgba($color: #111, $alpha: .1);
+    z-index: 3;
+    img {
+        user-select: none;
+        width: 7.5rem;
+        margin: 1.125rem 1.875rem;
+    }
+    .detect {
+        background: $primaryColor;
+        color: #fff;
+        padding: 8px 15px;
+        font-weight: 600;
+        font-size: 22px;
+        text-align: center;
+        &.ab {
+            background: red;
+        }
+        &.no-ab {
+            background: $primaryColor;
+        }
+    }
+    .message {
+        color: #333;
+        margin-top: 20px;
+        font-weight: 600;
+        font-size: 1rem;
+        text-align: center;
+    }
+}
+
 .navbar {
     display: flex;
     a {
